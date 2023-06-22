@@ -131,7 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         height: 100,
                         width: 100,
                         decoration: BoxDecoration(
-                          color: Colors.cyan,
+                          color: Colors.deepPurpleAccent,
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Text(
