@@ -1,3 +1,4 @@
+import 'package:demo_2/first_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -104,6 +105,100 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: Column(
           children: [
+            TextButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => FirstPage()));
+                },
+                child: Text("Text button",
+                    style:
+                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold))),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => FirstPage()));
+              },
+              child: Text("Elevated Button",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  )),
+            ),
+            OutlinedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => FirstPage()));
+                },
+                child: Text("Outlined Button",
+                    style:
+                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold))),
+            InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => FirstPage()));
+              },
+              child: Container(
+                alignment: Alignment.center,
+                height: 30,
+                width: 200,
+                color: Colors.blue,
+                child: Text("Custom Button",
+                    style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white)),
+              ),
+            ),
+          ],
+        ),
+
+        // stack widget
+        /*Stack(
+          children: [
+            Center(
+              child: Positioned(
+                top: 0,
+                left: 0,
+                child: Container(
+                  height: 100,
+                  width: 100,
+                  color: Colors.deepOrangeAccent,
+                ),
+              ),
+            ),
+            Positioned(
+              top: 0,
+              right: 0,
+              child: Container(
+                height: 100,
+                width: 100,
+                color: Colors.deepPurpleAccent,
+              ),
+            ),
+            Positioned(
+              bottom: 0,
+              left: 0,
+              child: Container(
+                height: 100,
+                width: 100,
+                color: Colors.cyan,
+              ),
+            ),
+            Positioned(
+              bottom: 0,
+              right: 0,
+              child: Container(
+                height: 100,
+                width: 100,
+                color: Colors.green,
+              ),
+            ),
+          ],
+        ),*/
+
+        //Image & gridview builder
+        /* Column(
+          children: [
             Container(
               child: Image.asset(
                 'assets/hyd photo.jpg',
@@ -146,7 +241,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ],
-        ),
+        ),*/
 
         /*ListView.separated(itemBuilder: (BuildContext context,int index){
                 return Container(
