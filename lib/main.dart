@@ -103,7 +103,49 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
-        body: Column(
+        body: Stack(
+          children: [
+            Positioned(
+              top: 0,
+              left: 0,
+              child: Container(
+                height: 100,
+                width: 100,
+                color: Colors.deepOrangeAccent,
+              ),
+            ),
+            Positioned(
+              top: 0,
+              right: 0,
+              child: Container(
+                height: 100,
+                width: 100,
+                color: Colors.deepPurpleAccent,
+              ),
+            ),
+            Positioned(
+              bottom: 0,
+              left: 0,
+              child: Container(
+                height: 100,
+                width: 100,
+                color: Colors.cyan,
+              ),
+            ),
+            Positioned(
+              bottom: 0,
+              right: 0,
+              child: Container(
+                height: 100,
+                width: 100,
+                color: Colors.green,
+              ),
+            ),
+          ],
+        ),
+
+        //Image & gridview builder
+        /* Column(
           children: [
             TextButton(
                 onPressed: () {
